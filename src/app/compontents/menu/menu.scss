@@ -1,0 +1,58 @@
+@import '../../styles/shared/colors';
+@import '../../styles/shared/fonts';
+
+.Menu {
+    color: $blue;
+    background-color: $light_grey;
+    max-width: 85px;
+    height: 480px;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 50px 0px 50px 50px;
+}
+
+.Menu button:last-child {
+    bottom: 20px;
+    position: absolute;
+
+    color: $dark_grey;
+    margin: 0px;
+    background-color: $grey;
+
+    & .Selected {
+        color: $blue;
+    }
+
+    & a {
+        color: $dark_grey;
+    }
+}
+
+.Item {
+    background-color: $dark_grey;
+    width: 65px;
+    height: 65px;
+    border: none;
+    border-radius: 50%;
+    color: $grey;
+    margin-top: 25px;
+    & .Selected {    
+        color: $light_yellow;
+        border: none;
+    }
+}
+
+a {
+    color: $grey;
+}
+
+.WrapContent {
+    display: flex;
+}
+
+.Content {
+    background: yellow;
+}
