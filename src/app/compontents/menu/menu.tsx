@@ -55,7 +55,7 @@ class Menu extends Component<any, {items: Array<IMenuItem> }> {
 
     public home(): ReactNode {
         const testVelocity = 120;
-        return <Velocimeter velocity={ testVelocity } rpm="6" radius="195" stroke="35" progress={ testVelocity }></Velocimeter>;
+        return <Velocimeter velocity={ testVelocity } gear="6" radius="195" stroke="35" progress={ testVelocity }></Velocimeter>;
     }
 
     public brightness(): ReactNode {
