@@ -1,0 +1,55 @@
+@import '../../styles/shared/colors';
+@import '../../styles/shared/fonts';
+
+.VelocimeterWrap {
+    height: 300px;
+    width: 300px;
+    background: $grey;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Velocimeter {
+    @extend .VelocimeterWrap;
+    background: $dark_grey;
+    display: grid;
+    align-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    text-align-last: center;
+}
+
+.velocity {
+    @extend .OxygenFont;
+    font-size: 48px;
+    color: $grey;
+    margin: 0px;
+}
+
+.km {
+    @extend .OpensansFont;
+    font-size: 18px;
+    color: $grey;
+    display: block;
+}
+
+.ComponentWrap {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CircleWrap {
+    transform: rotate(180deg);
+    position: fixed;
+    display: flex;
+}
+
+circle {
+    stroke-linecap: round; 
+    stroke: $blue;
+}

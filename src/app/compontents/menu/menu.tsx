@@ -11,6 +11,8 @@ import {
   NavLink
 } from "react-router-dom";
 
+import Velocimeter from '../velocimeter/velocimeter';
+
 class Menu extends Component<any, {items: Array<IMenuItem> }> {
     constructor(props: any) {
         super(props);
@@ -31,7 +33,7 @@ class Menu extends Component<any, {items: Array<IMenuItem> }> {
                         <div className="Menu">{ menuItems }</div>
                         <div className="Content">
                             <Switch>
-                              <Route path="/home">
+                              <Route path="/">
                                 { this.home() }
                               </Route>
                               <Route path="/brightness">
@@ -52,7 +54,8 @@ class Menu extends Component<any, {items: Array<IMenuItem> }> {
     }
 
     public home(): ReactNode {
-      return <h2>HOME</h2>;
+        const testVelocity = 120;
+        return <Velocimeter velocity={ testVelocity } rpm="6" radius="195" stroke="35" progress={ testVelocity }></Velocimeter>;
     }
 
     public brightness(): ReactNode {
@@ -83,7 +86,7 @@ class Menu extends Component<any, {items: Array<IMenuItem> }> {
     private createArrayMenu(): Array<IMenuItem> {
         const items: Array<IMenuItem> = [
             {
-                name: 'home',
+                name: '',
                 icon: ICON.moto,
             },
             {
