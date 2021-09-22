@@ -4,7 +4,7 @@
 .VelocimeterWrap {
     height: 300px;
     width: 300px;
-    background: $grey;
+    background: $light_grey;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -25,15 +25,14 @@
 .velocity {
     @extend .OxygenFont;
     font-size: 48px;
-    color: $grey;
+    color: $light_grey;
     margin: 0px;
 }
 
 .km {
     @extend .OpensansFont;
     font-size: 18px;
-    color: $grey;
-    display: block;
+    color: $light_grey;
 }
 
 .ComponentWrap {
@@ -43,10 +42,47 @@
     justify-content: center;
 }
 
-.CircleWrap {
-    transform: rotate(180deg);
+.Component {
     position: fixed;
     display: flex;
+}
+
+.CircleWrap {
+    @extend .Component;
+    transform: rotate(180deg);
+}
+
+.GearWrap {
+    @extend .Component;
+    bottom: 45%;
+}
+
+.Gear {
+    @extend .OxygenFont;
+    font-size: 32px;
+    color: $grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $blue;
+    text-align: center;
+}
+
+.PreviousGear { 
+    @extend .Gear;
+    background: $red_dark;
+}
+
+.CurrentGear {
+    @extend .Gear;
+    width: 70px;
+    height: 70px;
+    font-size: 48px;
+    background: $red_dusted;
+}
+
+.NextGear {
+    @extend .Gear;
 }
 
 circle {

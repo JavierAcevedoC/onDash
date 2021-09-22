@@ -6,7 +6,7 @@ class Velocimeter extends Component<any, any> {
         super(props);
         this.state = {
             velocity: props.velocity,
-            rpm: props.rpm
+            gear: props.gear
         }
     }
 
@@ -39,9 +39,20 @@ class Velocimeter extends Component<any, any> {
                         <h3 className="km">Km/h</h3>
                     </div>
                 </div>
+                <div className="GearWrap">
+                    <div className="PreviousGear">{ this.getGear(-1) }</div>
+                    <div className="CurrentGear">{ this.getGear() }</div>
+                    <div className="NextGear">{ this.getGear(1) }</div>
+                </div>
             </div>
         );
     };
+    
+    private getGear(position = 0): string | number {
+        const curr = this.state.gear;
+        const res = Number(curr) + position;
+        return Boolean(res >= 7) ? '' : res <= 0 ? 'N' : res;
+    }
 }
 
 export default Velocimeter;
