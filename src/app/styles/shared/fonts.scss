@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+.Icon {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.Icon.small { font-size: 24px; }
+.Icon.medium { font-size: 32px; }
+.Icon.big { font-size: 48px; }
+
+.OxygenFont {
+    font-family: 'Oxygen', sans-serif;
+}
+.OpensansFont {
+    font-family: 'Open Sans', sans-serif;
+}

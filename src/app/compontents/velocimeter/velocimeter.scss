@@ -1,0 +1,91 @@
+@import '../../styles/shared/colors';
+@import '../../styles/shared/fonts';
+
+.VelocimeterWrap {
+    height: 300px;
+    width: 300px;
+    background: $light_grey;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Velocimeter {
+    @extend .VelocimeterWrap;
+    background: $dark_grey;
+    display: grid;
+    align-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    text-align-last: center;
+}
+
+.velocity {
+    @extend .OxygenFont;
+    font-size: 48px;
+    color: $light_grey;
+    margin: 0px;
+}
+
+.km {
+    @extend .OpensansFont;
+    font-size: 18px;
+    color: $light_grey;
+}
+
+.ComponentWrap {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Component {
+    position: fixed;
+    display: flex;
+}
+
+.CircleWrap {
+    @extend .Component;
+    transform: rotate(180deg);
+}
+
+.GearWrap {
+    @extend .Component;
+    bottom: 45%;
+}
+
+.Gear {
+    @extend .OxygenFont;
+    font-size: 32px;
+    color: $grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $blue;
+    text-align: center;
+}
+
+.PreviousGear { 
+    @extend .Gear;
+    background: $red_dark;
+}
+
+.CurrentGear {
+    @extend .Gear;
+    width: 70px;
+    height: 70px;
+    font-size: 48px;
+    background: $red_dusted;
+}
+
+.NextGear {
+    @extend .Gear;
+}
+
+circle {
+    stroke-linecap: round; 
+    stroke: $blue;
+}
