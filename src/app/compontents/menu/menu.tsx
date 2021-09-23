@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 
 import Velocimeter from '../velocimeter/velocimeter';
+import Rpm from '../rpm/rpm';
 
 class Menu extends Component<any, {items: Array<IMenuItem> }> {
     constructor(props: any) {
@@ -55,7 +56,17 @@ class Menu extends Component<any, {items: Array<IMenuItem> }> {
 
     public home(): ReactNode {
         const testVelocity = 120;
-        return <Velocimeter velocity={ testVelocity } gear="6" radius="195" stroke="35" progress={ testVelocity }></Velocimeter>;
+        const testRpm = 6000;
+        return (
+            <div className="HomeIndicators">
+                <div className="RpmIndicator">
+                    <Rpm current={ testRpm } ></Rpm>
+                </div>
+                {/* <div className="VelocimeterIndicator">
+                  *     <Velocimeter velocity={ testVelocity } gear="6" radius="195" stroke="35" progress={ testVelocity }></Velocimeter>
+                  * </div> */}
+            </div>
+        );
     }
 
     public brightness(): ReactNode {
